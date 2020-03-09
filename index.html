@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adidas - Constance Termoz - Skills</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2><a href="https://constance-termoz.github.io/Homepageadidas/">🏠	</a>About my skills, my education and my professional experiences...</h2>
+
+
+<div id="btnContainer">
+  <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List view</button> 
+  <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid view</button>
+</div>
+<br>
+
+<div class="row">
+  <div class="column" style="background-color:#080705;">
+    <h2>IT Skills</h2>
+    <p>I learnt how to use R, Python, MySQL (Openclassroom class), HTML/CSS (actually this website was done with it), Ruby (below a litlle game created with it), <a href="https://public.tableau.com/profile/termoz#!/vizhome/AdidasinAustralia/Adidas" class="link-tableau">Tableau</a>, Pack office...</p>
+    <p style="font-size: 16px;">I invite you to try this game, Kind of a scrabble, you have to make the longuest word possible with 10 letters randomly selected 😉 Just click on the green arrow</p>
+    <iframe height="220px" width="80%" src="https://repl.it/@ConstanceTermoz/Word-Game?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="no" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" style="border-radius: 10px;"></iframe>
+  </div>
+  <div class="column" style="background-color:#F2AF29;">
+    <h2>International profile</h2>
+    <p>I had the chance to have an international profile made during my internships, my travels or short term exchanges (less than 2 months) as part of my studies 🌍</p>
+    <p>There for, I speak fluently French, Spanish and English. And I can't wait to learn German 🇩🇪</p>
+    <p style="font-weight: 5px; margin-bottom: 0.5px; font-size: 12px; color:#183059">Click on the globe 😉</p>
+    <a href="https://www.google.com/maps/d/viewer?mid=1e4pygRSLtHhj8mphRsygA7be6ih5hwZ7&ll=16.562827644008415%2C-24.862017700000024&z=3"><img src="images/globe.jpg" alt="Desk Globe"></a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#183059;">
+    <h2 style="margin-bottom: 70px;">Education & experiences</h2>
+    <p style="margin-bottom: 50px;">I am currently in MSc (Master 2) of data analytics and Artificial Intelligence at <a href="https://www.edhec.edu/en/rankings-and-accreditations" class="link-tableau">EDHEC</a>  where I deal with all the issues related to the development of new technologies in the business world. These are studies that I am passionate about and that constitute for me a real challenge that I love to take up every day !</p>
+    <p>I also did three internships that allowed me to discover the world of work, its demands and its challenges. This allowed me to acquire a certain maturity but also a mastery of desktop tools (especially excel). As I did two international internships (1 year in total), I have no problem communicating in a foreign language, whether in English or Spanish. </p>
+  </div>
+  <div class="column" style="background-color:#545F66;">
+    <h2>Others</h2>
+    <p>But I also consider myself to be a resourceful person: I do temporary work, and when I was younger I used to work at the fruit and vegetable market every saturday morning. Therefore, I am not afraid of working hard !!</p>
+  </div>
+</div>
+
+<script>
+var elements = document.getElementsByClassName("column");
+
+
+var i;
+
+
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+
+
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+</body>
+</html>
